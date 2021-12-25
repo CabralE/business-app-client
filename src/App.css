@@ -60,6 +60,7 @@
     "sidebar vendorform vendorform vendorform";
     padding: 10px;
     margin-left: 30;
+    background-color: rgb(204,204,231);
 }
 
 .sidebar-container,
@@ -67,12 +68,16 @@
 .vendorForm-container {
     margin: 10px;
     border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 /0.2);
+    background-color: rgba(166, 166, 201, 0.077);
+    
 }
 
 
 .sidebar-container {
     grid-area: sidebar;
-    background-color: olivedrab;
+    box-shadow: 0 3px 10px rgb(0 0 0 /0.2);
+    background-color: rgba(166, 166, 201, 0.077);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,13 +86,11 @@
 
 .poForm-container {
     grid-area: poform;
-    background-color: olivedrab;
     margin-left: 10px;
 }
 
 .vendorForm-container {
     grid-area: vendorform;
-    background-color: olivedrab;
 }
 
 
