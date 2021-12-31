@@ -1,18 +1,17 @@
 import React from "react";
-import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import PoForm from "../components/PoForm";
 import VendorForm from "../components/VendorForm";
-import Footer from "../components/Footer";
 
 const Index = (props) => {
+    
     const vendors = props.vendors
 
     return (
         <div>
-            <Header />
             <div className='body-container'>
                 <div className="sidebar-container"> 
+                <h1>Vendors</h1>
                     <Sidebar 
                         vendors={vendors}
                     />
@@ -26,7 +25,6 @@ const Index = (props) => {
                     />
                 </div>
             </div>
-            <Footer />
         </div>
     )
 };

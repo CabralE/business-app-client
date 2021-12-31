@@ -5,7 +5,7 @@ const VendorForm = (props) => {
     console.log('Vendor Form Props: ', vendors)
     return (
         vendors.map((vendor, index) => (
-            <div>
+            <div key={index}>
                 {vendor.name}
             </div>
         ))
