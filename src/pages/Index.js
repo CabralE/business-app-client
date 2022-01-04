@@ -4,8 +4,9 @@ import PoForm from "../components/PoForm";
 import VendorForm from "../components/VendorForm";
 
 const Index = (props) => {
-    
+    console.log('Index Props: ', props)
     const vendors = props.vendors
+    const purchaseOrders = props.purchaseOrders
 
     return (
         <div>
@@ -17,7 +18,9 @@ const Index = (props) => {
                     />
                 </div>
                 <div className="poForm-container">
-                    <PoForm />
+                    <PoForm 
+                        purchaseOrders={purchaseOrders}
+                    />
                 </div>
                 <div className="vendorForm-container">
                     <VendorForm
