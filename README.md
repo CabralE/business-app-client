@@ -12,6 +12,9 @@ Technologies Used
 * Database - PSQL
 
 
+Screen Shots
+- - - -
+![alt text](./images/ERD.png)
 
 
 
@@ -20,6 +23,9 @@ Getting Started
 Frontend deployment - https://focused-babbage-5adb72.netlify.app/
 
 Backend deployment - https://ec-business-app-server.herokuapp.com/
+
+
+
 
 
 Future Enhancements
