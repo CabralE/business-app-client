@@ -14,7 +14,16 @@ Technologies Used
 
 Screen Shots
 - - - -
+ERD
 ![alt text](./images/ERD.png)
+Initial wireframe for Index Page
+![alt text](./images/Wireframe-index-page.png)
+Wireframe for PO Page
+![alt text](./images/Wireframe-po-page.png)
+Wireframe for Show Page
+![alt text](./images/Wireframe-show-page.png)
+Wireframe for Vendor Index Page
+![alt text](./images/Wireframe-vendor-index-page.png)
 
 
 
