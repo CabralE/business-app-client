@@ -15,15 +15,15 @@ Technologies Used
 Screen Shots
 - - - -
 ERD
-![alt text](./images/ERD.png)
+![ERD](./images/ERD.png)
 Initial wireframe for Index Page
-![alt text](./images/Wireframe-index-page.png)
+![Wireframe-index-page](./images/Wireframe-index-page.png)
 Wireframe for PO Page
-![alt text](./images/Wireframe-po-page.png)
+![Wireframe for PO Page](./images/Wireframe-po-index-page.png)
 Wireframe for Show Page
-![alt text](./images/Wireframe-show-page.png)
+![Wireframe-show-page](./images/Wireframe-show-page.png)
 Wireframe for Vendor Index Page
-![alt text](./images/Wireframe-vendor-index-page.png)
+![Wireframe-vendor-index-page](./images/Wireframe-vendor-index-page.png)
 
 
 
