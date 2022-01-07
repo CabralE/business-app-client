@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {Link} from "react-router-dom"
 
 const ShowVendor = ({ vendors, addVendor}) => {
 
@@ -10,7 +11,14 @@ const ShowVendor = ({ vendors, addVendor}) => {
 
     const handleSubmission = (event) => {
         event.preventDefault()
-        addVendor(vendorForm)
+        let count = 0
+        for (const vendor of vendors) {
+            if (vendor.name === vendorForm.name) {
+                count += 1
+            }
+        }
+        if (count <= 0) {addVendor(vendorForm)}
+        count = 0
         // history.push("/")
     }
     
@@ -41,10 +49,13 @@ const ShowVendor = ({ vendors, addVendor}) => {
                                 value={vendorForm.currency}
                             />
                         </div>
+              
+                    </div>
+                    <Link to="/">
                         <input type="submit">
-                        
                         </input>
-                    </div>                    
+                    </Link>
+
                 </form>
             </div>
         </div>
