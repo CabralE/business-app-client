@@ -25,14 +25,12 @@ function App() {
     const response = await fetch(url);
     const data = await response.json();
     setVendors(data);
-    console.log('data:', data)
   }
 
   const getPurchaseOrders = async () => {
     const response = await fetch(lru);
     const data = await response.json();
     setPurchaseOrders(data);
-    console.log("PO data: ", data)
   }
 
   const addVendor = async (newVendor) => {
@@ -108,8 +106,16 @@ function App() {
               vendors={vendors}
               updateVendor={updateVendor}
               deleteVendor={deleteVendor}
+              purchaseOrder={purchaseOrders}
             />
           }/>
+        <Route path={`/vendors/:id/newpurchaseorder`} element={
+          <ShowPurchaseOrder
+            vendors={vendors}
+            purchaseOrders={purchaseOrders}
+            addPurchaseOrder={addPurchaseOrder}
+          />
+          } />
         </Routes>
       <Footer/>
     </div>

@@ -7,7 +7,7 @@ const PoForm = (props) => {
     return (
         purchaseOrders.map((po) => (
         <Link to={`/purchase_orders/${po.id}`} className="sidebar-vendors">
-            {po.VendorName}
+            PO{po.id} 
         </Link>
     )))
 };

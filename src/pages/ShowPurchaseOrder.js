@@ -1,10 +1,21 @@
 import React, { useState } from "react";
+import { useParams} from "react-router-dom"
 
-const ShowPurchaseOrder = ({ purchaseOrders, addPurchaseOrder}) => {
+const ShowPurchaseOrder = ({ purchaseOrders, addPurchaseOrder, vendors}) => {
     const [purchaseOrderForm, setPurchaseOrderForm] = useState(purchaseOrders)
-
+    let { id } = useParams();
+    const vendor = vendors.find(x => x.id === parseInt(id))
+    console.log(vendor)
     const handleChange = (e) => {
-        setPurchaseOrderForm({ ...purchaseOrderForm, [e.target.name]: e.target.value })
+        if (e.target.placeholder === vendor.name) {
+            setPurchaseOrderForm({ ...purchaseOrderForm, [e.target.name]: vendor.name })
+        } else if (e.target.placeholder === vendor.currency) {
+            setPurchaseOrderForm({ ...purchaseOrderForm, [e.target.name]: vendor.currency })
+        } else if (e.target.placeholder === vendor.id) {
+            setPurchaseOrderForm({ ...purchaseOrderForm, [e.target.name]: vendor.id })
+        } else {
+            setPurchaseOrderForm({ ...purchaseOrderForm, [e.target.name]: e.target.value })
+        }
     }
 
     const handleSubmission = (event) => {
@@ -23,7 +34,7 @@ const ShowPurchaseOrder = ({ purchaseOrders, addPurchaseOrder}) => {
                             <input
                                 className="vendor-input-money"
                                 type="text"
-                                placeholder="Name"
+                                placeholder="name"
                                 name="VendorName"
                                 onChange={handleChange}
                                 value={purchaseOrderForm.VendorName}
@@ -34,9 +45,8 @@ const ShowPurchaseOrder = ({ purchaseOrders, addPurchaseOrder}) => {
                             <input
                                 className="vendor-input-currency"
                                 type="text"
-                                placeholder="Currency"
+                                placeholder="currency"
                                 name="VendorCurrency"
-                                onChange={handleChange}
                                 value={purchaseOrderForm.VendorCurrency}
                             />
                         </div>
@@ -45,7 +55,7 @@ const ShowPurchaseOrder = ({ purchaseOrders, addPurchaseOrder}) => {
                             <input
                                 className="vendor-input-currency"
                                 type="integer"
-                                placeholder="Currency"
+                                placeholder="Quantity"
                                 name="Quantity"
                                 onChange={handleChange}
                                 value={purchaseOrderForm.Quantity}
@@ -56,7 +66,7 @@ const ShowPurchaseOrder = ({ purchaseOrders, addPurchaseOrder}) => {
                             <input
                                 className="vendor-input-currency"
                                 type="integer"
-                                placeholder="Currency"
+                                placeholder="Amount"
                                 name="Amount"
                                 onChange={handleChange}
                                 value={purchaseOrderForm.Amount}
@@ -67,7 +77,7 @@ const ShowPurchaseOrder = ({ purchaseOrders, addPurchaseOrder}) => {
                             <input
                                 className="vendor-input-currency"
                                 type="integer"
-                                placeholder="Currency"
+                                placeholder="Total"
                                 name="Total"
                                 onChange={handleChange}
                                 value={purchaseOrderForm.Total}
@@ -78,7 +88,7 @@ const ShowPurchaseOrder = ({ purchaseOrders, addPurchaseOrder}) => {
                             <input
                                 className="vendor-input-currency"
                                 type="text"
-                                placeholder="Currency"
+                                placeholder="Expense Type"
                                 name="ExpenseType"
                                 onChange={handleChange}
                                 value={purchaseOrderForm.ExpenseType}
@@ -89,7 +99,7 @@ const ShowPurchaseOrder = ({ purchaseOrders, addPurchaseOrder}) => {
                             <input
                                 className="vendor-input-currency"
                                 type="integer"
-                                placeholder="Currency"
+                                placeholder="id"
                                 name="vendor_id"
                                 onChange={handleChange}
                                 value={purchaseOrderForm.vendor_id}

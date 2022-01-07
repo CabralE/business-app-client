@@ -12,7 +12,6 @@ const Header = (props) => {
         <div className="navbar-links">
                 <Link to="/" className="home-button"><h3>Home</h3></Link>
                 <Link to="/newvendor" className="vendor-button"><h3>Create Vendor</h3></Link>
-                <Link to="/newpurchaseorder" className="po-button"><h3>Create PO</h3></Link>
                 <Link to="/" className="about-button"><h3>About</h3></Link>
         </div>
     </div>

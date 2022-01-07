@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 const Show = (props) => {
-    const {vendors, updateVendor, deleteVendor} = props
+    const { vendors, updateVendor, deleteVendor, purchaseOrder} = props
     let {id} = useParams();
     const vendor = vendors.find(x => x.id === parseInt(id) )
     const [editVendor, setEditVendor] = useState(vendor)
@@ -18,7 +18,8 @@ const Show = (props) => {
         props.deleteVendor(vendor.id)
         props.history.push("/")
     } 
-    console.log('editVendor: ', editVendor)
+    const filter = purchaseOrder.filter(x => x.VendorName === vendor.name)
+
     return (
         <div className="show-container">
             <h3>Vendor: {vendor?.name}  </h3>
@@ -47,6 +48,31 @@ const Show = (props) => {
             value="Update Vendor"
             />
         </form>
+        <div>
+            <Link to={`/vendors/${vendor?.id}/newpurchaseorder`}>
+                <button>Create a new PO</button>
+            </Link>
+            
+        </div>
+            <div className="table">
+                <table>
+                    <tr>
+                        <th>Purchase Order</th>
+                        <th>Quantity</th>
+                        <th>Amount</th>
+                        <th>Total</th>
+                    </tr>
+                    {filter.map((ele) =>  (
+                        <tr>
+                            <td>PO#{ele.id}</td>
+                            <td>{ele.Quantity}</td>
+                            <td>{ele.Amount}</td>
+                            <td>{ele.Quantity * ele.Amount}</td>
+                        </tr>
+                        
+                    ))}
+                </table>
+            </div>
         </div>
             
         
