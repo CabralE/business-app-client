@@ -34,7 +34,7 @@ const ShowPurchaseOrder = ({ purchaseOrders, addPurchaseOrder, vendors}) => {
                             <input
                                 className="vendor-input-money"
                                 type="text"
-                                placeholder="name"
+                                placeholder={vendor.name}
                                 name="VendorName"
                                 onChange={handleChange}
                                 value={purchaseOrderForm.VendorName}
@@ -77,7 +77,7 @@ const ShowPurchaseOrder = ({ purchaseOrders, addPurchaseOrder, vendors}) => {
                             <input
                                 className="vendor-input-currency"
                                 type="integer"
-                                placeholder="Total"
+                                placeholder={purchaseOrderForm.Quantity * purchaseOrderForm.Amount}
                                 name="Total"
                                 onChange={handleChange}
                                 value={purchaseOrderForm.Total}
@@ -99,15 +99,18 @@ const ShowPurchaseOrder = ({ purchaseOrders, addPurchaseOrder, vendors}) => {
                             <input
                                 className="vendor-input-currency"
                                 type="integer"
-                                placeholder="id"
+                                placeholder={vendor.id}
                                 name="vendor_id"
                                 onChange={handleChange}
                                 value={purchaseOrderForm.vendor_id}
                             />
                         </div>
-                        <input type="submit">
+                            <input
+                                className="submission-purchaseorder"
+                                type="submit">
 
-                        </input>
+                            </input>
+                        
                     </div>
                 </form>
             </div>

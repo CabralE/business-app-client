@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom"
 import Index from './pages/Index';
 import ShowVendor from './pages/ShowVendor';
 import ShowPurchaseOrder from './pages/ShowPurchaseOrder'
+import PurchaseOrderDetails from './pages/PurchaseOrderDetails'
 import Show from './pages/Show';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -101,6 +102,14 @@ function App() {
             
             />
           }/>
+        <Route path="/purhcase_orders/:id" element={
+          <PurchaseOrderDetails
+            vendors={vendors}
+            updateVendor={updateVendor}
+            deleteVendor={deleteVendor}
+            purchaseOrder={purchaseOrders}
+          />
+        } />
           <Route path="/vendors/:id" element={
             <Show
               vendors={vendors}

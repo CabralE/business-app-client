@@ -116,12 +116,14 @@
 
 
 
+
 .vendor-form-input{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 70vh;
+    background-color: white;
     
      
 }
@@ -140,9 +142,19 @@
     background-color: rgba(166, 166, 201, 0.077);
 }
 
+.submission-purchaseorder {
+    margin: 20px 0 0 8em;
+    border-radius: 3px;
+}
+
+.submission-purchaseorder:hover {
+    background-color: rgb(183, 234, 183);
+
+}
 .show-container{
     background-color: white;
     height: 60vh;
+    border: 3px 0 blue;
 }
 
 .second-show-container {
@@ -152,9 +164,54 @@
 
 .show-top {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding-top: 2px;
 }
 
+.vendor-form {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.input-vendor {
+    margin: 20px 0 0 2px;
+}
+
+.create-delete-button {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 2em;
+}
+.create-delete-button > * {
+    margin: 20px;
+}
+
+
+.table {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0;
+}
+
+table > * {
+    margin-left: 2px;
+}
+
+.second-table > * {
+    margin-left: 20px;
+}
+
+.po-id,
+.po-quantity,
+.po-amount,
+.po-total {
+    margin-left: 2px;
+}
 .footer-continer {
     position:absolute;
    bottom:0;
