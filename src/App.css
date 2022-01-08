@@ -62,8 +62,8 @@
     display: grid;
     grid-template-areas: 
     "sidebar poform poform poform"
-    "sidebar vendorform vendorform vendorform"
-    "sidebar vendorform vendorform vendorform";
+    "sidebar vendorForm vendorForm vendorForm"
+    "sidebar vendorForm vendorForm vendorForm";
     padding: 10px;
     margin-left: 30;
     background-color: rgb(189, 189, 206);
@@ -100,6 +100,12 @@
     margin-left: 10px;
 }
 
+.po-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .vendorForm-container {
     grid-area: vendorform;
 }
@@ -108,13 +114,15 @@
     display: inline;
 }
 
+
+
 .vendor-form-input{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 70vh;
-    background-color: white;
+    
      
 }
 
@@ -134,7 +142,17 @@
 
 .show-container{
     background-color: white;
-    height: max-content;
+    height: 60vh;
+}
+
+.second-show-container {
+    padding-top: 20px;
+    
+}
+
+.show-top {
+    display: flex;
+    justify-content: center;
 }
 
 .footer-continer {

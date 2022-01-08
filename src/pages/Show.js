@@ -22,38 +22,43 @@ const Show = (props) => {
 
     return (
         <div className="show-container">
-            <h3>Vendor: {vendor?.name}  </h3>
-            <h3>Currency: {vendor?.currency}  </h3>
+            <div className="second-show-container">
+                <div className="show-top">
+                    <h3>Vendor: {vendor?.name}  </h3>
+                    <h3>Currency: {vendor?.currency}  </h3>
+                </div>
 
-        <button id="delete-button" onClick={removeVendor}>
-            delete
-        </button>
-        <form onSubmit={handleSubmit}>
-            <input
-            type="text"
-            value={editVendor?.name}
-            name="name"
-            placeholder="name"
-            onChange={handleChange}
-            />
-            <input
-            type="text"
-            value={editVendor?.currency}
-            name="currency"
-            placeholder="currency"
-            onChange={handleChange}
-            />
-            <input
-            type="submit"
-            value="Update Vendor"
-            />
-        </form>
-        <div>
-            <Link to={`/vendors/${vendor?.id}/newpurchaseorder`}>
-                <button>Create a new PO</button>
-            </Link>
+                <button id="delete-button" onClick={removeVendor}>
+                    delete
+                </button>
+                <form onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        value={editVendor?.name}
+                        name="name"
+                        placeholder="name"
+                        onChange={handleChange}
+                    />
+                    <input
+                        type="text"
+                        value={editVendor?.currency}
+                        name="currency"
+                        placeholder="currency"
+                        onChange={handleChange}
+                    />
+                    <input
+                        type="submit"
+                        value="Update Vendor"
+                    />
+                </form>
+                <div>
+                    <Link to={`/vendors/${vendor?.id}/newpurchaseorder`}>
+                        <button>Create a new PO</button>
+                    </Link>
+
+                </div>
+            </div>
             
-        </div>
             <div className="table">
                 <table>
                     <tr>

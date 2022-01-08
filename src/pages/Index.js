@@ -18,15 +18,12 @@ const Index = (props) => {
                     />
                 </div>
                 <div className="poForm-container">
+                    <h1 className="po-header">Purchase Orders</h1>
                     <PoForm 
                         purchaseOrders={purchaseOrders}
                     />
                 </div>
-                <div className="vendorForm-container">
-                    <VendorForm
-                        vendors={vendors}
-                    />
-                </div>
+
             </div>
         </div>
     )
