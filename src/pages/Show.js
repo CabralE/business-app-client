@@ -28,11 +28,10 @@ const Show = (props) => {
                     <h3>Currency: {vendor?.currency}  </h3>
                 </div>
 
-                <button id="delete-button" onClick={removeVendor}>
-                    delete
-                </button>
-                <form onSubmit={handleSubmit}>
+                
+                <form className="vendor-form" onSubmit={handleSubmit}>
                     <input
+                        className="input-vendor"
                         type="text"
                         value={editVendor?.name}
                         name="name"
@@ -40,6 +39,7 @@ const Show = (props) => {
                         onChange={handleChange}
                     />
                     <input
+                        className="input-vendor"
                         type="text"
                         value={editVendor?.currency}
                         name="currency"
@@ -47,20 +47,26 @@ const Show = (props) => {
                         onChange={handleChange}
                     />
                     <input
+                        className="input-vendor"
                         type="submit"
                         value="Update Vendor"
                     />
                 </form>
-                <div>
+                
+                <div className="create-delete-button">
                     <Link to={`/vendors/${vendor?.id}/newpurchaseorder`}>
                         <button>Create a new PO</button>
                     </Link>
+                    <button id="delete-button" onClick={removeVendor}>
+                        delete
+                    </button>
 
                 </div>
+                
             </div>
             
             <div className="table">
-                <table>
+                <table className="second-table">
                     <tr>
                         <th>Purchase Order</th>
                         <th>Quantity</th>
@@ -69,10 +75,10 @@ const Show = (props) => {
                     </tr>
                     {filter.map((ele) =>  (
                         <tr>
-                            <td>PO#{ele.id}</td>
-                            <td>{ele.Quantity}</td>
-                            <td>{ele.Amount}</td>
-                            <td>{ele.Quantity * ele.Amount}</td>
+                            <td className="po-id">PO#{ele.id}</td>
+                            <td className="po-quantity">{ele.Quantity}</td>
+                            <td className="po-amount">{ele.Amount}</td>
+                            <td className="po-total">{ele.Quantity * ele.Amount}</td>
                         </tr>
                         
                     ))}
