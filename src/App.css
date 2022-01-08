@@ -122,10 +122,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 80vh;
     background-color: white;
-    
-     
+      
 }
 
 .vendor-input{
@@ -140,6 +139,10 @@
     padding: 20px 12px 40px 12px;
     box-shadow: 0 3px 10px rgb(0 0 0 /0.2);
     background-color: rgba(166, 166, 201, 0.077);
+}
+
+.vendor-submit-button {
+    margin: 4vh 0 0 8vw;
 }
 
 .submission-purchaseorder {
@@ -212,6 +215,23 @@ table > * {
 .po-total {
     margin-left: 2px;
 }
+
+.show-purchaseorder {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: white;
+    padding: 20px 12px 40px 12px;
+    box-shadow: 0 3px 10px rgb(0 0 0 /0.2);
+    position: absolute;
+    margin: 10vh 0 0 20vw;
+    width: 50vw;
+    height: 60vh;
+}
+
+.top-and-bottom {
+    
+}
 .footer-continer {
     position:absolute;
    bottom:0;
@@ -239,3 +259,4 @@ table > * {
 .linkedin-logo-link {
     color: black;
 }
+
