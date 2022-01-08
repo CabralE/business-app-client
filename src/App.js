@@ -102,7 +102,7 @@ function App() {
             
             />
           }/>
-        <Route path="/purhcase_orders/:id" element={
+        <Route path="/purchase_orders/:id" element={
           <PurchaseOrderDetails
             vendors={vendors}
             updateVendor={updateVendor}

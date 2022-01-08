@@ -49,12 +49,14 @@ const ShowVendor = ({ vendors, addVendor}) => {
                                 value={vendorForm.currency}
                             />
                         </div>
+                            <input
+                                className="vendor-submit-button"
+                                type="submit">
+                            </input>
+
               
                     </div>
-                    <Link to="/">
-                        <input type="submit">
-                        </input>
-                    </Link>
+
 
                 </form>
             </div>
