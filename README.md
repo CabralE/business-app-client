@@ -38,11 +38,13 @@ Backend deployment - https://ec-business-app-server.herokuapp.com/
 
 
 
-Future Enhancements
+Future Enhancements and Challenges
 - - - -
 - [ ] Add user authentication and authorization
 - [ ] Adjust Purchase Order Schema 
 - [ ] Adjust Vendor Schema to intake more fields
 - [ ] Learn how to use Link in forms
-- [ ] Make mobile friendly
+- [ ] Add a feature such as Carousel, Modal, or Sandwich Menu
+- [ ] Responsive Design (make mobile friendly)
+
 
