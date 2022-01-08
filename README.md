@@ -7,7 +7,8 @@ A simply web application that allows you to create vendors and purchase orders.
 
 Technologies Used
 - - - -
-* Frontend - React
+* Frontend - HTML, CSS, and JavaScript
+* Library - React
 * Backend - Ruby on Rails
 * Database - PSQL
 
@@ -42,4 +43,6 @@ Future Enhancements
 - [ ] Add user authentication and authorization
 - [ ] Adjust Purchase Order Schema 
 - [ ] Adjust Vendor Schema to intake more fields
+- [ ] Learn how to use Link in forms
+- [ ] Make mobile friendly
 
